@@ -19,6 +19,13 @@
 (defconst spacemacs-version          "0.200.5" "Spacemacs version.")
 (defconst spacemacs-emacs-min-version   "24.4" "Minimal version of Emacs.")
 
+(setq-default
+ configuration-layer--elpa-archives
+ '(("melpa-cn" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+   ("gnu-cn" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+   ("org-cn" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
+
+
 (if (not (version<= spacemacs-emacs-min-version emacs-version))
     (message (concat "Your version of Emacs (%s) is too old. "
                      "Spacemacs requires Emacs version %s or above.")
